@@ -1,0 +1,353 @@
+html,body{
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    animation: fadeIn 0.6s ease-in forwards;
+    overflow-x: hidden;
+}
+
+.header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    margin-top: 37px;
+    margin-left: 70px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.line {
+    width: 39%;  
+    height: 1px;   
+    margin-top: 50px;
+    margin-left: 200px; 
+    border: none;
+    background-color: rgb(255, 255, 255);
+    opacity: 30%;
+    z-index: 1;
+    position: absolute;
+}
+
+.nav{
+    width: 60%;
+    height: 58px;
+    background: rgba(172, 167, 167, 0.1);
+    backdrop-filter: blur(17px); 
+    margin-top: 45px;
+    z-index: 0;
+    position: relative;
+    margin-left: 41%;
+    display: flex;
+    gap:55px;
+    padding-top:32px ;
+    padding-left: 9%;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    font-family: "Barlow";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0; 
+    background-color: white;
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    transition: width 0.4s ease-in-out;
+}
+
+.button:hover::after {
+    width: 100%; 
+}
+
+.choosed{
+    position: relative;
+}
+
+.choosed::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%; 
+    background-color: white;
+    bottom: -31px; 
+    left: 50%;
+}
+
+
+.number{
+    margin-right: 7px;
+    font-family: "Barlow";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.soyou{
+    font-family: "Barlow";
+    font-weight: 400;
+    font-style: normal;
+    color: #D0D6F9;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-family: "Bellefair";
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 130px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main_pargraph{
+    font-family: "Barlow";
+    font-weight: 300;
+    font-style: normal;
+    color: #D0D6F9;
+    font-size: 16px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+.text_group{
+    width: 480px
+}
+
+.main_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80%;
+    gap: 27%;
+}
+
+.explore{
+    font-family: "Bellefair";
+    font-weight: 300;
+    font-style: normal;
+    color: #000000;
+    font-size: 35px;
+    width:270px;
+    height: 270px;
+    border-radius: 270px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+   
+}
+
+.explore:hover{
+   outline: 90px solid rgba(237, 236, 236, 0.12);
+   filter: brightness(1.1);
+   transition: all 0.3s ease-in-out;
+}
+
+.menu{
+    display: none;
+}
+
+.exit_side_menu{
+    color: #D0D6F9;
+    font-size: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.side_menu{
+    width: 250px;
+    height: 100%;
+    background-color: rgba(11, 13, 23, 0.15); 
+    backdrop-filter: blur(80px);
+    position: fixed; 
+    z-index: 100;
+    top:0px;
+    right: -250px; 
+    transition: right 0.4s ease-in-out; 
+    overflow-y: auto;
+}
+
+.side_menu_active {
+    right: 0px;
+}
+
+.side_buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 100px;
+    margin-left: 35px;
+}
+
+.side_button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;  /* Start with width 0 */
+    background-color: white;
+    top: 0;
+    left: 213px; 
+    transition: width 0.2s ease-in-out; 
+}
+
+.side_button:hover::after {
+    width: 3px; 
+}
+
+
+
+
+.choosed_side_button{
+    position: relative;
+}
+
+.choosed_side_button::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px; 
+    background-color: white;
+    top: 0; 
+    left: 213px;
+}
+
+.none{
+    display: none;
+}
+
+
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media(min-width:1400px){
+    .side_menu{
+        display: none;
+    }
+}
+
+@media(max-width:1400px){
+    .nav , .line{
+        display: none;
+    }
+    .menu{
+        display: block;
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        right: 77px; 
+        top: 43px;
+        cursor: pointer;
+    }
+    .header{
+        margin-bottom: 60px;
+    }
+     
+}
+
+@media(max-width:1100px){
+    .text_group{
+        width: 400px;
+        text-align: center;
+    }
+
+}
+
+/* Tablet-design */
+
+@media(max-width:890px){
+    html,body{
+        background-image: url(../assets/home/background-home-tablet.jpg);
+        background-position: center;
+    }
+    .text_group{
+        width: 450px;
+        text-align: center;
+    }
+    .main_page{
+        gap:17%;
+    }
+
+
+}
+
+
+/* mobile-design */
+
+@media(max-width:600px){
+    .text_group{
+            width: 350px;
+            text-align: center;
+    }
+    .title{
+        font-size: 80px;
+        margin-bottom: 15px;
+    }
+    .main_pargraph{
+        font-size: 15px;
+    }
+    .soyou{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .explore{
+        width: 170px;
+        height: 170px;
+        border-radius: 170px;
+    }
+    .explore:hover{
+        outline: 60px solid rgba(237, 236, 236, 0.12);
+        filter: brightness(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+    .main_page{
+        gap:0;
+    }
+    html,body{
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-position: center;
+    }
+    .side_menu{
+        width: 250px;
+    }
+    .menu{
+        right: 30px; 
+        top: 43px;
+    }
+    .logo{
+        margin-top: 40px;
+        margin-left: 30px;
+        z-index: 3;
+        cursor: pointer;
+    }
+    
+
+}

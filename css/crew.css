@@ -1,0 +1,170 @@
+body{
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+    overflow-x: hidden;
+}
+
+.page_number{
+    margin-right: 25px;
+    font-family: "Barlow";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 30px;
+    
+}
+
+.page_title{
+    font-family: "Barlow";
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 30px;
+    margin-left: 10.5%;
+    margin-top: 3%;
+}
+
+.crew_text{
+    margin-bottom: 150px;
+    margin-top: 30px;
+}
+
+.job_title{
+    font-family: "Bellefair";
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+}
+
+.worker_name{
+    font-family: "Bellefair";
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255);
+    font-size: 45px;
+}
+
+.job_pargraph{
+    font-family: "Barlow";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;    
+    color: #D0D6F9;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    width:470px;
+}
+
+.crew{
+    display: flex;
+    gap: 400px;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.worker_image{
+ height: 750px;
+}
+.dots{
+    display: flex;
+    gap:30px;
+    margin-left: 8px;
+
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.dot:hover{
+    background-color: white;
+}
+
+.choosed_dot{
+    background-color: white;
+}
+/* Mobile-Mode */
+
+@media(max-width:600px){
+    .page_title{
+        font-size:16px;
+        text-align: center; 
+        margin-left: 0px; 
+    }
+    .page_number{
+        font-size:16px;
+    }
+    .worker_name{
+        font-size:24px;
+    }
+    .job_title{
+        font-size:18px;
+    }
+    .job_pargraph{
+        font-size: 15px;
+        width: fit-content !important;
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .worker_image{
+        height: 300px;
+        width: 300px;
+        margin-left: 150px;
+    }
+    .dots{
+        margin-left: 34% !important;
+        margin-bottom: 0px;
+    }
+    .crew{
+        margin-top: 0px;
+    }
+    .crew_text{
+        margin-top: 0px;
+    }
+
+}
+
+/* tablet-mode */
+
+@media(max-width:1600px){
+    .worker_name{
+        text-align: center;
+    }
+    .crew{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        margin-top: 80px;
+        gap: 0px;
+        margin-left: 0px;
+    }
+    .job_title{
+        text-align: center;
+    }
+    .job_pargraph{
+        text-align: center;
+        margin-bottom: 50px;
+        width: 500px;
+
+    }
+    .dots{
+        margin-left: 180px;
+        margin-bottom: 0px;
+    }
+    .worker_image{
+        height: 600px;
+        margin-left: 0px;
+    }
+}
